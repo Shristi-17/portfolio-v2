@@ -1,0 +1,87 @@
+div{
+    border: 2px solid black;
+    gap: 20px;
+}
+body{
+    padding: 1%;
+    margin-top: 100px;
+    background-color:#ecf6f9 ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.whole{
+    margin: 0px;
+    padding: 0px;
+    /* border: 2px solid black; */
+    width: 80%;
+}
+
+.desc img{
+    /* border: 2px solid black; */
+    width: 180px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0;
+}
+
+.desc{
+    /* border: 2px solid black; */
+    display: flex;
+    font-size: 30px;
+    gap: 40px;
+    letter-spacing: 1px;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+}
+
+.proj{
+    background-color: white;
+    box-shadow: 0.5px 0.5px 5px 0.5px rgba(0, 0, 0, 0.097) ;
+    border-radius: 10px;
+    margin-top: 30px;
+    height: auto;
+}
+
+.box{
+    background-color: rgb(255, 255, 255);
+    /* padding: 15px; */
+    display: grid;
+    grid-template-columns: 35% 10% auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0.5px 0.5px 5px 0.3px rgba(0, 0, 0, 0.097) ; */
+    border-radius: 10px;
+    margin-bottom: 30px;
+    height: auto;
+}
+
+.icons{
+        text-align: center;
+
+}
+.icons img{
+    height: 20px;
+    width: 20px;
+}
+
+.proj p{
+    font-size: 15px;
+}
+
+.boxes a{
+    text-decoration:underline;
+    color: rgb(38, 38, 38);
+}
+
+.boxes{
+    padding: 50px;
+    /* height: 200px; */
+}
+
+.abt{
+    padding: 20px;
+}
