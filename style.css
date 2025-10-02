@@ -3,19 +3,20 @@ div{
     gap: 20px;
 }
 body{
-    padding: 1%;
-    margin-top: 100px;
-    background-color:#ecf6f9 ;
+    background-color: #f0f2f5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
+    padding: 20px 0;
 }
 
-.whole{
-    margin: 0px;
-    padding: 0px;
-    /* border: 2px solid black; */
-    width: 80%;
+.whole {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    max-width: 800px;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .desc img{
@@ -37,51 +38,136 @@ body{
     align-items: center;
 }
 
-.proj{
-    background-color: white;
-    box-shadow: 0.5px 0.5px 5px 0.5px rgba(0, 0, 0, 0.097) ;
-    border-radius: 10px;
-    margin-top: 30px;
-    height: auto;
-}
-
-.box{
-    background-color: rgb(255, 255, 255);
-    /* padding: 15px; */
+.social{
+    margin-top: 40px;
+    margin-bottom: 110px;
     display: grid;
-    grid-template-columns: 35% 10% auto;
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
-    justify-content: center;
-    align-items: center;
-    /* box-shadow: 0.5px 0.5px 5px 0.3px rgba(0, 0, 0, 0.097) ; */
+}
+
+.social a{
+    /* border: 2px solid black; */
+    align-self: center;
+    justify-self: center;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.371);
+    text-underline-offset: 5px;
+    color:black;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px 30px;
     border-radius: 10px;
-    margin-bottom: 30px;
-    height: auto;
 }
 
-.icons{
-        text-align: center;
-
-}
-.icons img{
-    height: 20px;
-    width: 20px;
+.social a:hover{
+    background-color: #2092CE;
+    text-decoration: none;
+    color: white;
 }
 
-.proj p{
+.proj {
+    margin-top: 30px;
+}
+
+/* each project card */
+.box {
+    background-color: #f5f5f5;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* project header: title + links */
+.boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.boxes h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+}
+
+/* project links (source, website) */
+.project-links a {
+    margin-left: 12px;
+    color: #2092CE;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: #2092CE;
+    text-decoration: underline;
+}
+
+/* icons row */
+.icons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.icons img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* project description */
+.abt {
+    color: #333;
     font-size: 15px;
+    line-height: 1.5;
 }
 
-.boxes a{
-    text-decoration:underline;
-    color: rgb(38, 38, 38);
+
+@media (max-width: 768px) {
+    .desc {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .desc img {
+        width: 140px;  /* smaller profile picture */
+    }
+    .desc p {
+        font-size: 22px;
+    }
 }
 
-.boxes{
-    padding: 50px;
-    /* height: 200px; */
+@media (max-width: 600px) {
+    .social {
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+        margin-bottom: 50px;
+    }
 }
 
-.abt{
-    padding: 20px;
+@media (max-width: 768px) {
+    .box {
+        grid-template-columns: 1fr;  /* single column */
+        text-align: center;
+        padding: 20px;
+    }
+    .icons {
+        margin-top: 10px;
+    }
+    .abt {
+        padding: 15px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    .boxes h2 {
+        font-size: 18px;
+    }
 }
